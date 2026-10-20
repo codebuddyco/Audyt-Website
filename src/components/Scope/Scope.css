@@ -1,0 +1,227 @@
+.scope {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  padding: 24px var(--section-pad-x) 0;
+}
+
+.scope__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+}
+
+.scope__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.scope__title {
+  max-width: 640px;
+}
+
+.scope__lead {
+  max-width: 400px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+/* Zakładki — tylko mobile */
+.scope__tabs {
+  display: none;
+}
+
+.scope__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 72px;
+  align-items: start;
+}
+
+/* ---------- Kolumna ---------- */
+.scope-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.scope-group__head {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.scope-group__number {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-faint);
+}
+
+.scope-group__title {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.scope-group__subtitle {
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+.scope-group__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* ---------- Wiersz ---------- */
+.scope-item {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  gap: 8px;
+  padding: 22px 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.scope-item__number {
+  padding-top: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--color-accent);
+}
+
+.scope-item__body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.scope-item__title {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.scope-item__text {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1100px) {
+  .scope {
+    gap: 40px;
+  }
+
+  .scope__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .scope__grid {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  .scope__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 48px;
+  }
+}
+
+/* ---------- Mobile: zakładki ---------- */
+@media (max-width: 640px) {
+  .scope {
+    gap: 16px;
+    padding: 24px 0 0;
+  }
+
+  .scope__header {
+    padding: 0 var(--section-pad-x);
+  }
+
+  .scope__heading {
+    gap: 12px;
+  }
+
+  .scope__lead {
+    display: none;
+  }
+
+  .scope__tabs {
+    display: flex;
+    gap: 28px;
+    padding: 0 var(--section-pad-x);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .scope__tab {
+    min-height: 46px;
+    margin-bottom: -1px;
+    padding: 0 0 12px;
+    border: none;
+    border-bottom: 2px solid transparent;
+    background: none;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    transition: color 0.2s var(--ease-out), border-color 0.2s var(--ease-out);
+  }
+
+  .scope__tab--active {
+    color: var(--color-text);
+    border-bottom-color: var(--color-accent);
+  }
+
+  .scope__grid {
+    display: block;
+  }
+
+  .scope-group {
+    display: none;
+    gap: 4px;
+    padding: 0 var(--section-pad-x);
+  }
+
+  .scope-group--active {
+    display: flex;
+  }
+
+  .scope-group__number,
+  .scope-group__title {
+    display: none;
+  }
+
+  .scope-group__subtitle {
+    font-size: 13px;
+    padding-bottom: 8px;
+  }
+
+  .scope-item {
+    grid-template-columns: 34px minmax(0, 1fr);
+    padding: 18px 0;
+  }
+
+  .scope-item__title {
+    font-size: 16px;
+  }
+
+  .scope-item__text {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,72 @@
+/* Tokeny projektu — zmieniaj kolory, fonty i odstępy w jednym miejscu */
+:root {
+  /* Kolory */
+  --color-bg: #F6F7F4;
+  --color-hero: #EAEEE8;
+  --color-surface: #FFFFFF;
+  --color-accent: #2F6B3F;
+  --color-accent-hover: #1F4D2B;
+  --color-accent-light: #EEF3EC;
+  --color-accent-on-dark: #9BCB9F;
+  --color-text: #1B211D;
+  --color-text-secondary: #4F5A53;
+  --color-text-muted: #56615A;
+  --color-text-faint: #8A948C;
+  --color-border: #DDE1DA;
+  --color-border-soft: #ECEEEA;
+  --color-divider: #D5DDD3;
+  --color-dark: #1B211D;
+  --color-dark-text: #C3CBC5;
+
+  /* Typografia */
+  --font-heading: 'Bricolage Grotesque', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', 'Segoe UI', Helvetica, sans-serif;
+
+  /* Promienie */
+  --radius-lg: 16px;
+  --radius-sm: 10px;
+  --radius-pill: 999px;
+
+  /* Odstępy */
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-48: 48px;
+
+  /* Ruch */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.45, 0, 0.55, 1);
+
+  /* Układ strony */
+  --page-max: none;
+  --page-pad-x: 20px;
+  --page-pad-top: 32px;
+  --page-gap: 32px;
+  --section-pad-x: 16px;
+  --navbar-h: 76px; /* wysokość paska nawigacji — używana do dopasowania hero do ekranu */
+  --hero-gap-bottom: 10px; /* odstęp hero od dolnej krawędzi ekranu */
+}
+
+@media (max-width: 1100px) {
+  :root {
+    --page-pad-top: 24px;
+    --page-gap: 24px;
+  }
+}
+
+@media (max-width: 900px) {
+  :root {
+    --navbar-h: 64px;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --page-pad-top: 12px;
+    --page-gap: 16px;
+    --section-pad-x: 8px;
+  }
+}

@@ -1,0 +1,118 @@
+.navbar {
+  position: relative;
+  z-index: 10;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 6px 24px rgba(27, 33, 29, 0.06);
+}
+
+.navbar__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px 14px 36px;
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  color: var(--color-accent);
+}
+
+.navbar__logo:hover {
+  color: var(--color-accent-hover);
+}
+
+.navbar__nav {
+  display: flex;
+  align-items: center;
+  gap: 44px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.navbar__link {
+  color: var(--color-text);
+  transition: color 0.25s var(--ease-out);
+}
+
+.navbar__link:hover {
+  color: var(--color-accent);
+}
+
+.navbar__cta {
+  min-height: 48px;
+  padding: 0 26px;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+}
+
+/* Elementy mobilne — ukryte na desktopie */
+.navbar__toggle {
+  display: none;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: var(--color-hero);
+  color: var(--color-text);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.navbar__mobile {
+  display: none;
+}
+
+/* Tablet i mobile: hamburger */
+@media (max-width: 900px) {
+  .navbar__bar {
+    padding: 8px 8px 8px 20px;
+  }
+
+  .navbar__logo svg {
+    width: 24px;
+    height: 24px;
+    stroke-width: 2.2;
+  }
+
+  .navbar__nav {
+    display: none;
+  }
+
+  .navbar__toggle {
+    display: flex;
+  }
+
+  .navbar__mobile:not([hidden]) {
+    display: flex;
+    flex-direction: column;
+    padding: 4px 20px 20px;
+    animation: menuIn 0.3s var(--ease-out);
+  }
+
+  .navbar__mobile-link {
+    display: flex;
+    align-items: center;
+    min-height: 48px;
+    border-top: 1px solid var(--color-border-soft);
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-text);
+  }
+
+  .navbar__mobile-cta {
+    margin-top: 12px;
+    width: 100%;
+    min-height: 48px;
+  }
+}
+
+@keyframes menuIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: none; }
+}
