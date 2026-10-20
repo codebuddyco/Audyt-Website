@@ -62,8 +62,13 @@
     gap: 8px;
   }
 
+  /* Każda karta zajmuje maksymalnie 10% wysokości ekranu */
   .benefit-card {
-    padding: 16px 18px;
+    padding: 8px 14px;
+    max-height: 10vh;
+    max-height: 10svh;
+    justify-content: center;
+    overflow: hidden;
   }
 
   .benefit-card:hover {
@@ -75,16 +80,19 @@
   }
 
   .benefit-card__body {
-    gap: 4px;
+    gap: 2px;
   }
 
   .benefit-card__title {
-    font-size: 17px;
-    line-height: 1.25;
+    font-size: 15px;
+    line-height: 1.2;
   }
 
   .benefit-card__text {
-    font-size: 14px;
-    line-height: 1.45;
+    font-size: 13px;
+    line-height: 1.3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
