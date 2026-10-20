@@ -67,6 +67,7 @@
   :root {
     --page-pad-top: 12px;
     --page-gap: 16px;
+    --page-pad-x: 20px;
     --section-pad-x: 8px;
   }
 }
