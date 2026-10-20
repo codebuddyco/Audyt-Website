@@ -103,7 +103,7 @@ button {
   gap: 10px;
   min-height: 56px;
   padding: 0 28px;
-  border-radius: var(--radius-pill);
+  border-radius: var(--radius-lg); /* ten sam kształt co navbar */
   font-weight: 600;
   font-size: 15px;
   letter-spacing: 0.04em;

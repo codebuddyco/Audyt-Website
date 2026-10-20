@@ -325,20 +325,23 @@
     display: none;
   }
 
+  /* Pasek haseł: mała, ale czytelna czcionka — zajmuje jak najmniej miejsca */
   .hero__facts {
-    gap: 18px 16px;
-    padding-top: 22px;
+    gap: 8px 12px;
+    padding-top: 14px;
   }
 
   .hero__fact {
-    gap: 4px;
+    gap: 1px;
   }
 
   .hero__fact-title {
-    font-size: 17px;
+    font-size: 12px;
+    line-height: 1.25;
   }
 
   .hero__fact-text {
-    font-size: 13px;
+    font-size: 11px;
+    line-height: 1.3;
   }
 }
