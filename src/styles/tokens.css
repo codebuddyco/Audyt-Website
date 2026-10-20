@@ -2,7 +2,7 @@
 :root {
   /* Kolory */
   --color-bg: #F6F7F4;
-  --color-hero: #EAEEE8;
+  --color-hero: #E1EADC;
   --color-surface: #FFFFFF;
   --color-accent: #2F6B3F;
   --color-accent-hover: #1F4D2B;
@@ -42,12 +42,12 @@
 
   /* Układ strony */
   --page-max: none;
-  --page-pad-x: 20px;
+  --page-pad-x: 50px;
   --page-pad-top: 32px;
   --page-gap: 32px;
   --section-pad-x: 16px;
   --navbar-h: 76px; /* wysokość paska nawigacji — używana do dopasowania hero do ekranu */
-  --hero-gap-bottom: 10px; /* odstęp hero od dolnej krawędzi ekranu */
+  --hero-gap-bottom: 30px; /* odstęp hero od dolnej krawędzi ekranu */
 }
 
 @media (max-width: 1100px) {
